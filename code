@@ -1,0 +1,57 @@
+import java.util.List;
+
+public class Main {
+    public static void main(String[] args) {
+        // Example product details
+        String productName = "SuperSmooth Blender";
+        String productBrand = "BlenderPro";
+        double price = 99.99;
+        String productCategory = "Kitchen Appliances";
+        String productDescription = "The SuperSmooth Blender is designed to provide the best blending experience with a powerful motor, easy-to-use interface, and sleek design.";
+        List<String> features = List.of(
+            "Powerful 1000W motor",
+            "6 stainless steel blades for smooth results",
+            "Dishwasher-safe parts for easy cleaning",
+            "3-speed settings and pulse function",
+            "Compact and durable design"
+        );
+
+        // Social Media Content
+        String instagramLink = "https://instagram.com/blenderpro";
+        String facebookLink = "https://facebook.com/blenderpro";
+        String youtubeLink = "https://youtube.com/blenderpro";
+        String hashtag = "#SuperSmoothBlender";
+
+        // Generate and print the Amazon product listing
+        System.out.println(generateProductListing(productName, productBrand, price, productCategory, productDescription, features, instagramLink, facebookLink, youtubeLink, hashtag));
+    }
+
+    public static String generateProductListing(String productName, String productBrand, double price, String productCategory, String productDescription, List<String> features, String instagramLink, String facebookLink, String youtubeLink, String hashtag) {
+        StringBuilder sb = new StringBuilder();
+        
+        sb.append("\n");
+        sb.append("Product Name: ").append(productName).append("\n");
+        sb.append("Brand: ").append(productBrand).append("\n");
+        sb.append("Price: $").append(price).append("\n");
+        sb.append("Category: ").append(productCategory).append("\n");
+        sb.append("\n");
+        sb.append("Description:\n").append(productDescription).append("\n");
+        
+        sb.append("\nFeatures:\n");
+        for (String feature : features) {
+            sb.append("- ").append(feature).append("\n");
+        }
+
+        sb.append("\n**\n");
+        sb.append("Follow us on Social Media:\n");
+        sb.append("Instagram: ").append(instagramLink).append("\n");
+        sb.append("Facebook: ").append(facebookLink).append("\n");
+        sb.append("YouTube: ").append(youtubeLink).append("\n");
+
+        sb.append("\nUse Hashtag: ").append(hashtag).append("\n");
+
+        sb.append("\n");
+        
+        return sb.toString();
+    }
+}
